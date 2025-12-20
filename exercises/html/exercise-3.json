@@ -1,1 +1,44 @@
-
+{
+    "id": "html-3",
+    "title": "Membuat List di HTML",
+    "language": "html",
+    "difficulty": "beginner",
+    "estimated_time": 20,
+    "description": "Membuat tiga jenis list di HTML: unordered list, ordered list, dan description list.",
+    "instructions": "Edit kode HTML untuk membuat halaman dengan tiga jenis list.",
+    "requirements": [
+        {
+            "id": "req1",
+            "description": "Buat unordered list dengan minimal 3 item",
+            "test": "document.querySelector('ul') && document.querySelectorAll('ul li').length >= 3"
+        },
+        {
+            "id": "req2",
+            "description": "Buat ordered list dengan minimal 3 item",
+            "test": "document.querySelector('ol') && document.querySelectorAll('ol li').length >= 3"
+        },
+        {
+            "id": "req3",
+            "description": "Buat description list dengan 2 term dan deskripsi",
+            "test": "document.querySelector('dl') && document.querySelectorAll('dl dt').length >= 2 && document.querySelectorAll('dl dd').length >= 2"
+        },
+        {
+            "id": "req4",
+            "description": "Gunakan proper class untuk setiap list",
+            "test": "document.querySelector('.shopping-list') && document.querySelector('.steps-list') && document.querySelector('.definition-list')"
+        }
+    ],
+    "hints": [
+        "Gunakan tag <ul> untuk unordered list",
+        "Gunakan tag <ol> untuk ordered list",
+        "Gunakan tag <dl> untuk description list",
+        "Gunakan <li> untuk item list",
+        "Gunakan <dt> dan <dd> untuk description list"
+    ],
+    "solution": "<ul class=\"shopping-list\">\n  <li>Apel</li>\n  <li>Pisang</li>\n  <li>Jeruk</li>\n</ul>\n\n<ol class=\"steps-list\">\n  <li>Panaskan oven</li>\n  <li>Campur bahan</li>\n  <li>Panggang selama 30 menit</li>\n</ol>\n\n<dl class=\"definition-list\">\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language</dd>\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>",
+    "starter_code": {
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Latihan List HTML</title>\n</head>\n<body>\n    <h1>Latihan Membuat List HTML</h1>\n</body>\n</html>",
+        "css": "body {\n    font-family: Arial, sans-serif;\n    padding: 20px;\n}",
+        "js": "console.log('Latihan List HTML');"
+    }
+}
