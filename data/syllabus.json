@@ -1,1 +1,50 @@
-
+[
+  {
+    "id": "html-fundamentals",
+    "title": "Dasar-dasar HTML",
+    "description": "Pelajari struktur dasar HTML, tag, elemen, dan atribut.",
+    "category": "HTML",
+    "duration": 8,
+    "lessons": 6
+  },
+  {
+    "id": "css-styling",
+    "title": "Styling dengan CSS",
+    "description": "Pelajari selektor CSS, properti styling, box model, dan layout dasar.",
+    "category": "CSS",
+    "duration": 10,
+    "lessons": 8
+  },
+  {
+    "id": "css-advanced",
+    "title": "CSS Lanjutan",
+    "description": "Flexbox, Grid, animasi, dan responsive design.",
+    "category": "CSS",
+    "duration": 12,
+    "lessons": 10
+  },
+  {
+    "id": "javascript-basics",
+    "title": "JavaScript Dasar",
+    "description": "Variabel, tipe data, operator, dan struktur kontrol.",
+    "category": "JavaScript",
+    "duration": 15,
+    "lessons": 12
+  },
+  {
+    "id": "javascript-dom",
+    "title": "JavaScript dan DOM",
+    "description": "Memanipulasi elemen HTML, event handling, dan form validation.",
+    "category": "JavaScript",
+    "duration": 12,
+    "lessons": 10
+  },
+  {
+    "id": "web-apis",
+    "title": "Web APIs",
+    "description": "Fetch API, localStorage, dan API browser lainnya.",
+    "category": "JavaScript",
+    "duration": 10,
+    "lessons": 8
+  }
+]
