@@ -1,0 +1,118 @@
+.exercises-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.exercises-list::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 3px;
+}
+
+.exercises-list::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 3px;
+}
+
+.exercises-list::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-light);
+}
+
+.instructions-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.instructions-content::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 3px;
+}
+
+.instructions-content::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 3px;
+}
+
+.instructions-content::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-light);
+}
+
+.editor-line-numbers::-webkit-scrollbar {
+    width: 4px;
+}
+
+.editor-line-numbers::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.editor-line-numbers::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 2px;
+}
+
+.editor-textarea::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.editor-textarea::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+.editor-textarea::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+.editor-textarea::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+.console-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.console-content::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.console-content::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+}
+
+.console-content::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.code-example::-webkit-scrollbar {
+    height: 6px;
+}
+
+.code-example::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.code-example::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+}
+
+.code-example::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-light);
+}
