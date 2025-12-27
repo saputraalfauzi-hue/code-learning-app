@@ -3,400 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Belajar Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jasa Joki Game </title>
+    <meta name="description" content="Solusi terbaik untuk menaikkan rank dan progres game ML, FF, PUBG, Wuthering Waves, Roblox, dan PGR dengan aman.">
+    <meta name="keywords" content="jasa joki ml, joki ff, joki pubg, joki wuthering waves, joki roblox, joki pgr, joki game murah terpercaya">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <h1><i class="fas fa-graduation-cap"></i> BelajarWeb</h1>
-                <p>Platform Belajar Pemrograman Web</p>
-            </div>
-            <div class="user-info">
-                <div class="user-avatar">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="user-name">
-                    <span id="username">Pengguna</span>
-                    <button id="logout-btn" class="btn-small">Keluar</button>
-                </div>
-            </div>
-        </header>
-
-        <nav class="sidebar">
-            <ul class="nav-menu">
-                <li class="nav-item active" data-section="dashboard">
-                    <i class="fas fa-home"></i>
-                    <span>Dashboard</span>
-                </li>
-                <li class="nav-item" data-section="latihan">
-                    <i class="fas fa-dumbbell"></i>
-                    <span>Latihan</span>
-                </li>
-                <li class="nav-item" data-section="syllabus">
-                    <i class="fas fa-book"></i>
-                    <span>Syllabus</span>
-                </li>
-                <li class="nav-item" data-section="chat">
-                    <i class="fas fa-robot"></i>
-                    <span>Chat AI</span>
-                </li>
-                <li class="nav-item" data-section="referensi">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Referensi</span>
-                </li>
-                <li class="nav-item" data-section="progres">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Progres</span>
-                </li>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Joki<span>Pro</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#services">Layanan Joki</a></li>
+                <li><a href="#about">Hubungi Kami</a></li>
             </ul>
-            
-            <div class="progress-summary">
-                <div class="progress-circle">
-                    <svg width="60" height="60">
-                        <circle cx="30" cy="30" r="25" class="progress-bg"></circle>
-                        <circle cx="30" cy="30" r="25" class="progress-bar" id="progress-circle"></circle>
-                    </svg>
-                    <span id="progress-percent">0%</span>
-                </div>
-                <p>Progres Belajar</p>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Jasa Joki, Tingkatkan Rank Anda Sekarang.</h1>
+                <p class="hero-subtitle">Layanan cepat, aman, dan terpercaya untuk berbagai game populer. Kami memberikan hasil terbaik dengan proses yang transparan.</p>
+                <a href="https://wa.me/6288971300175" class="btn" target="_blank">Konsultasi Sekarang</a>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <main class="content">
-            <section id="dashboard" class="content-section active">
-                <h2>Dashboard</h2>
-                <div class="dashboard-cards">
-                    <div class="card">
-                        <div class="card-icon" style="background-color: #e3f2fd;">
-                            <i class="fas fa-dumbbell" style="color: #2196f3;"></i>
-                        </div>
-                        <h3>Latihan Selesai</h3>
-                        <p id="completed-exercises">0</p>
-                        <a href="#" class="card-link" data-section="latihan">Lihat Latihan</a>
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Joki Game</h2>
+            <div class="games-grid">
+                <div class="game-card" data-game="Mobile Legends">
+                    <div class="game-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="card">
-                        <div class="card-icon" style="background-color: #f3e5f5;">
-                            <i class="fas fa-book" style="color: #9c27b0;"></i>
-                        </div>
-                        <h3>Materi Dipelajari</h3>
-                        <p id="completed-topics">0</p>
-                        <a href="#" class="card-link" data-section="syllabus">Lihat Syllabus</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon" style="background-color: #e8f5e9;">
-                            <i class="fas fa-chart-line" style="color: #4caf50;"></i>
-                        </div>
-                        <h3>Progres</h3>
-                        <p id="overall-progress">0%</p>
-                        <a href="#" class="card-link" data-section="progres">Lihat Detail</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon" style="background-color: #fff3e0;">
-                            <i class="fas fa-robot" style="color: #ff9800;"></i>
-                        </div>
-                        <h3>Pertanyaan ke AI</h3>
-                        <p id="ai-questions">0</p>
-                        <a href="#" class="card-link" data-section="chat">Tanya AI</a>
-                    </div>
+                    <h3 class="game-name">Mobile Legends</h3>
+                    <p class="game-desc">Joki rank, winrate, klasemen, dan akun ML dengan proses aman dan cepat.</p>
                 </div>
                 
-                <div class="recent-activity">
-                    <h3>Aktivitas Terakhir</h3>
-                    <ul id="recent-activity-list">
-                        <li>Belum ada aktivitas</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="latihan" class="content-section">
-                <div class="section-header">
-                    <h2>Latihan</h2>
-                    <div class="filter-options">
-                        <select id="difficulty-filter">
-                            <option value="all">Semua Tingkat</option>
-                            <option value="easy">Mudah</option>
-                            <option value="medium">Sedang</option>
-                            <option value="hard">Sulit</option>
-                        </select>
-                        <select id="status-filter">
-                            <option value="all">Semua Status</option>
-                            <option value="completed">Selesai</option>
-                            <option value="in-progress">Dalam Proses</option>
-                            <option value="not-started">Belum Dimulai</option>
-                        </select>
+                <div class="game-card" data-game="Free Fire">
+                    <div class="game-icon">
+                        <i class="fas fa-fire"></i>
                     </div>
+                    <h3 class="game-name">Free Fire</h3>
+                    <p class="game-desc">Naikkan tier dan level di Free Fire dengan bantuan pemain profesional.</p>
                 </div>
                 
-                <div class="exercises-container" id="exercises-container">
-                    <div class="loading">Memuat latihan...</div>
-                </div>
-            </section>
-
-            <section id="syllabus" class="content-section">
-                <div class="section-header">
-                    <h2>Syllabus</h2>
-                    <button id="reset-syllabus" class="btn-secondary">Reset Progres Syllabus</button>
+                <div class="game-card" data-game="PUBG Mobile">
+                    <div class="game-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3 class="game-name">PUBG</h3>
+                    <p class="game-desc">Joki PUBG untuk meningkatkan rank, RP, dan menyelesaikan misi event.</p>
                 </div>
                 
-                <div class="syllabus-container" id="syllabus-container">
-                    <div class="loading">Memuat syllabus...</div>
-                </div>
-            </section>
-
-            <section id="chat" class="content-section">
-                <div class="section-header">
-                    <h2>Chat AI Asisten Belajar</h2>
-                    <div class="api-status">
-                        <span class="status-indicator" id="api-status"></span>
-                        <span id="api-status-text">Status API</span>
+                <div class="game-card" data-game="Wuthering Waves">
+                    <div class="game-icon">
+                        <i class="fas fa-wind"></i>
                     </div>
+                    <h3 class="game-name">Wuthering Waves</h3>
+                    <p class="game-desc">Layanan joki farming, quest, dan progres karakter di Wuthering Waves.</p>
                 </div>
                 
-                <div class="chat-container">
-                    <div class="chat-messages" id="chat-messages">
-                        <div class="message ai">
-                            <div class="message-avatar">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="message-content">
-                                <div class="message-header">
-                                    <span class="sender">Asisten AI</span>
-                                    <span class="time">Sekarang</span>
-                                </div>
-                                <p>Halo! Saya asisten AI untuk membantu Anda belajar pemrograman web. Apa yang ingin Anda tanyakan hari ini?</p>
-                            </div>
-                        </div>
+                <div class="game-card" data-game="Roblox">
+                    <div class="game-icon">
+                        <i class="fas fa-cube"></i>
                     </div>
-                    
-                    <div class="chat-input-container">
-                        <div class="quick-questions">
-                            <button class="quick-question" data-question="Apa itu HTML?">Apa itu HTML?</button>
-                            <button class="quick-question" data-question="Bagaimana cara membuat layout dengan CSS Grid?">CSS Grid</button>
-                            <button class="quick-question" data-question="Jelaskan konsep asynchronous di JavaScript">Async JavaScript</button>
-                            <button class="quick-question" data-question="Berikan contoh fungsi di JavaScript">Contoh Fungsi</button>
-                        </div>
-                        
-                        <div class="input-group">
-                            <textarea id="user-input" placeholder="Ketik pertanyaan Anda tentang pemrograman web..."></textarea>
-                            <button id="send-btn" class="btn-primary">
-                                <i class="fas fa-paper-plane"></i> Kirim
-                            </button>
-                        </div>
-                        <p class="input-hint">Gunakan API key Gemini yang telah disediakan. Tekan Shift+Enter untuk baris baru.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="referensi" class="content-section">
-                <h2>Referensi Belajar</h2>
-                
-                <div class="search-container">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-reference" placeholder="Cari referensi...">
-                    </div>
-                    <select id="reference-category">
-                        <option value="all">Semua Kategori</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="tools">Tools</option>
-                        <option value="framework">Framework</option>
-                    </select>
+                    <h3 class="game-name">Roblox</h3>
+                    <p class="game-desc">Bantuan menyelesaikan misi, farming currency, dan achievement di Roblox.</p>
                 </div>
                 
-                <div class="references-container" id="references-container">
-                    <div class="reference-category">
-                        <h3><i class="fab fa-html5" style="color: #e34f26;"></i> HTML</h3>
-                        <div class="reference-list">
-                            <div class="reference-item" data-category="html">
-                                <div class="reference-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>MDN Web Docs - HTML</h4>
-                                    <p>Dokumentasi lengkap HTML dari Mozilla Developer Network.</p>
-                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                            <div class="reference-item" data-category="html">
-                                <div class="reference-icon">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>W3Schools HTML Tutorial</h4>
-                                    <p>Tutorial interaktif HTML dengan contoh yang dapat dicoba.</p>
-                                    <a href="https://www.w3schools.com/html/" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="game-card" data-game="Punishing Gray Raven">
+                    <div class="game-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    
-                    <div class="reference-category">
-                        <h3><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS</h3>
-                        <div class="reference-list">
-                            <div class="reference-item" data-category="css">
-                                <div class="reference-icon">
-                                    <i class="fas fa-palette"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>CSS-Tricks</h4>
-                                    <p>Artikel, tutorial, dan tips tentang CSS modern.</p>
-                                    <a href="https://css-tricks.com/" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                            <div class="reference-item" data-category="css">
-                                <div class="reference-icon">
-                                    <i class="fas fa-th-large"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>Flexbox Froggy</h4>
-                                    <p>Game interaktif untuk belajar CSS Flexbox.</p>
-                                    <a href="https://flexboxfroggy.com/" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="reference-category">
-                        <h3><i class="fab fa-js-square" style="color: #f7df1e;"></i> JavaScript</h3>
-                        <div class="reference-list">
-                            <div class="reference-item" data-category="javascript">
-                                <div class="reference-icon">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>Eloquent JavaScript</h4>
-                                    <p>Buku online gratis tentang JavaScript.</p>
-                                    <a href="https://eloquentjavascript.net/" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                            <div class="reference-item" data-category="javascript">
-                                <div class="reference-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>JavaScript.info</h4>
-                                    <p>Tutorial JavaScript modern dari dasar hingga topik lanjutan.</p>
-                                    <a href="https://javascript.info/" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="reference-category">
-                        <h3><i class="fas fa-tools" style="color: #6c757d;"></i> Tools & Framework</h3>
-                        <div class="reference-list">
-                            <div class="reference-item" data-category="tools">
-                                <div class="reference-icon">
-                                    <i class="fab fa-git-alt"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>Git & GitHub</h4>
-                                    <p>Dokumentasi Git dan GitHub untuk version control.</p>
-                                    <a href="https://docs.github.com/en" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                            <div class="reference-item" data-category="framework">
-                                <div class="reference-icon">
-                                    <i class="fab fa-react"></i>
-                                </div>
-                                <div class="reference-content">
-                                    <h4>React Documentation</h4>
-                                    <p>Dokumentasi resmi React library.</p>
-                                    <a href="https://reactjs.org/docs/getting-started.html" target="_blank" class="reference-link">Kunjungi Situs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="progres" class="content-section">
-                <h2>Progres Belajar</h2>
-                
-                <div class="progress-overview">
-                    <div class="progress-chart">
-                        <canvas id="progress-chart"></canvas>
-                    </div>
-                    
-                    <div class="progress-stats">
-                        <div class="stat-item">
-                            <h4>Total Waktu Belajar</h4>
-                            <p id="total-study-time">0 jam</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Latihan Diselesaikan</h4>
-                            <p id="total-exercises-completed">0</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Materi Dipelajari</h4>
-                            <p id="total-topics-completed">0</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>Pertanyaan ke AI</h4>
-                            <p id="total-ai-questions">0</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="progress-details">
-                    <h3>Detail Progres per Minggu</h3>
-                    <div class="week-progress-container" id="week-progress-container">
-                        <div class="no-data">Belum ada data progres mingguan.</div>
-                    </div>
-                </div>
-                
-                <div class="export-options">
-                    <button id="export-data" class="btn-secondary">Ekspor Data Progres</button>
-                    <button id="reset-progress" class="btn-danger">Reset Semua Progres</button>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <div id="exercise-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="exercise-modal-title">Judul Latihan</h3>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div id="exercise-modal-content">
-                    <p>Memuat konten latihan...</p>
-                </div>
-                <div class="exercise-actions">
-                    <button id="start-exercise" class="btn-primary">Mulai Latihan</button>
-                    <button id="submit-exercise" class="btn-success" style="display: none;">Kirim Jawaban</button>
-                    <button id="mark-complete" class="btn-secondary" style="display: none;">Tandai Selesai</button>
+                    <h3 class="game-name">Punishing Gray Raven</h3>
+                    <p class="game-desc">Joki farming, daily quest, dan progres endgame content di PGR.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="login-modal" class="modal">
-        <div class="modal-content small">
-            <div class="modal-header">
-                <h3>Masuk ke Akun</h3>
-            </div>
-            <div class="modal-body">
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="username-input">Nama Pengguna</label>
-                        <input type="text" id="username-input" placeholder="Masukkan nama pengguna" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Masuk</button>
-                </form>
-                <p class="form-note">Nama pengguna akan disimpan di localStorage untuk personalisasi pengalaman belajar.</p>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="about-title">Tentang Kami</h2>
+                <p class="about-text">
+                    Kami adalah tim pemain profesional yang berfokus pada efisiensi dan keamanan. 
+                    Dengan pengalaman bertahun-tahun di berbagai game kompetitif, kami memahami cara 
+                    terbaik untuk meningkatkan rank dan progres game Anda. Kami menjamin kerahasiaan 
+                    data akun Anda dan memberikan progres pengerjaan yang konsisten setiap hari, 
+                    dengan update real-time untuk memastikan Anda selalu tahu perkembangan layanan joki.
+                </p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Joki<span>Pro</span></div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/6288971300175" class="contact-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp: +62 889-7130-0175</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@fik_x3gt" class="contact-btn" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok: @fik_x3gt</span>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 JokiPro. Semua hak dilindungi.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
