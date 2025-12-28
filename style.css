@@ -14,19 +14,19 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background: #0A0A0A url('1.jpeg') no-repeat center center fixed;
+    background-size: cover;
     color: var(--text-primary);
     font-family: var(--font-family);
     font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 g:px;
 }
 
 header {
